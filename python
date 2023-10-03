@@ -1,0 +1,15 @@
+sort integers based on set bits
+n=int(input())
+arr=[]
+for i in range(0,n):
+    arr.append(int(input()))
+ar=[]
+count=0
+for k in range(0,n):
+    p=arr[k]
+    while(p!=0):
+        count += p & 1
+        p>>=1
+    ar.append(count)
+for j in range(0,n):
+    print (ar[j])
